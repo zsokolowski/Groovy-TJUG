@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<programming>
+    <langs platform="jvm">
+        <language type="static">Java</language>
+        <language type="dynamic">Groovy</language>
+        <language type="static">Scala</language>
+    </langs>
+    <langs platform="browser">
+        <language type="interpreted">JavaScript</language>
+    </langs>
+</programming>
