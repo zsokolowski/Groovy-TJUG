@@ -13,14 +13,17 @@ import pl.data.xmlExample.XMLDemo
  */
 class First {
     public static void main(String[] args) {
+        println "basics".center(80, "-")+"\n"       //add argument to spoil
         def text = "Groovy !!!"
         println text
         assert text instanceof String
 
-        Clousures.toUpperCase()
-        println SingletonTest.instance.amSingleton
+        text = 1
 
-        Clousures.listFile(XMLDemo.xmlFilePath)
+        assert text instanceof Integer
+
+        println "\n"+"Markup builders xml and json".center(80, "-")+"\n"
+
         def demo = new XMLDemo()
         demo.parseXML()
 
@@ -30,15 +33,32 @@ class First {
 
         demo.getPerson()
 
+
+        println "\n"+"Regular expresions".center(80, "-")+"\n"
+
         RegExpDemo.testRegexp()
+
+        println "\n"+"Closures".center(80, "-")+"\n"
+
+        Clousures.toUpperCase()
+        println SingletonTest.instance.amSingleton
+
+        Clousures.listFile(XMLDemo.xmlFilePath)
+
+        println "\n"+"Ranges".center(80, "-")+"\n"
+
 
         RangesDemo.testRanges()
 
         RangesDemo.ageCalculation()
 
+        println "\n"+"Collections".center(80, "-")+"\n"
+
         CollectionsDemo.testList()
         CollectionsDemo.showMoreIntrestingExampleList()
         CollectionsDemo.mapFunctionality()
+
+        println "\n"+"Groovy is really dynamic".center(80, "-")+"\n"
 
         DynamicDemo dynamicDemo = new DynamicDemo()
         dynamicDemo.nonExistingCalls()
