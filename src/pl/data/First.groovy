@@ -19,47 +19,43 @@ class First {
         assert text instanceof String
 
         text = 1
-
         assert text instanceof Integer
 
-        println "\n"+"Markup builders xml and json".center(80, "-")+"\n"
 
+
+        println "\n"+"Markup builders xml and json".center(80, "-")+"\n"
         def demo = new XMLDemo()
         demo.parseXML()
-
         demo.createXML()
 
         demo.createJson()
-
         demo.getPerson()
 
-
-        println "\n"+"Regular expresions".center(80, "-")+"\n"
-
+        println "\n"+"Regular expressions".center(80, "-")+"\n"
         RegExpDemo.testRegexp()
 
         println "\n"+"Closures".center(80, "-")+"\n"
-
         Clousures.toUpperCase()
-        println SingletonTest.instance.amSingleton
-
         Clousures.listFile(XMLDemo.xmlFilePath)
 
         println "\n"+"Ranges".center(80, "-")+"\n"
-
-
-        RangesDemo.testRanges()
-
+        RangesDemo.testRanges();
         RangesDemo.ageCalculation()
 
         println "\n"+"Collections".center(80, "-")+"\n"
-
         CollectionsDemo.testList()
         CollectionsDemo.showMoreIntrestingExampleList()
         CollectionsDemo.mapFunctionality()
 
-        println "\n"+"Groovy is really dynamic".center(80, "-")+"\n"
+        println "\n"+"GDK".center(80, "-")+"\n"
+        GDKDemo gdkDemo = new GDKDemo()
+        gdkDemo.getUrlContents()
+        gdkDemo.traverseFileSystem()
 
+        println "\n"+"AST".center(80, "-")+"\n"
+        println SingletonTest.instance.amSingleton
+
+        println "\n"+"Groovy is really dynamic".center(80, "-")+"\n"
         DynamicDemo dynamicDemo = new DynamicDemo()
         dynamicDemo.nonExistingCalls()
         dynamicDemo.changeBehaviour()
