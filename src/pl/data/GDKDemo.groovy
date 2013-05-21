@@ -36,4 +36,23 @@ class GDKDemo {
                 sort : sortByTypeThenName
         ) {it -> totalSize += it.size(); println it.name; count++ }
     }
+    
+    def workingFiles() {
+        def file1 = new File('groovy1.txt')
+        def file2 = new File('groovy2.txt')
+        def file3 = new File('groovy3.txt')
+        
+
+        file1.write 'Working with files is easy.\n'
+        file1 << 'See how easy it is to add text to a file.\n'
+        def testString = "yeah"
+        file2.text = """Maybe text has some structure?
+Lets insert something: ${testString}
+
+simplest way to create templates"""
+        
+        file3.withWriter('UTF-8') { writer ->
+            writer.write('Napiszmy po polsku: ąęł.')
+        }
+    }
 }

@@ -51,6 +51,7 @@ class First {
         GDKDemo gdkDemo = new GDKDemo()
         gdkDemo.getUrlContents()
         gdkDemo.traverseFileSystem()
+        gdkDemo.workingFiles()
 
         println "\n"+"AST".center(80, "-")+"\n"
         println SingletonTest.instance.amSingleton
