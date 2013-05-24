@@ -21,8 +21,6 @@ class First {
         text = 1
         assert text instanceof Integer
 
-
-
         println "\n"+"Markup builders xml and json".center(80, "-")+"\n"
         def demo = new XMLDemo()
         demo.parseXML()
@@ -66,5 +64,12 @@ class First {
 
         println "test".dynamicDemo("demo")
 
+        println "\n"+"Groovy 2.x".center(80, "-")+"\n"
+
+        TypeCheckedDemo typeCheckedDemo = new TypeCheckedDemo()
+        typeCheckedDemo.closureInAction()
+
     }
+
+
 }
