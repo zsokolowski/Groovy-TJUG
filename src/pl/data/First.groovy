@@ -50,6 +50,8 @@ class First {
         gdkDemo.getUrlContents()
         gdkDemo.traverseFileSystem()
         gdkDemo.workingFiles()
+        gdkDemo.runProcess()
+        gdkDemo.transformFile(new File("resources/fileToTransform.txt"))
 
         println "\n"+"AST".center(80, "-")+"\n"
         println SingletonTest.instance.amSingleton

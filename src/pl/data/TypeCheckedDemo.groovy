@@ -15,8 +15,8 @@ import groovy.transform.TypeChecked
 class TypeCheckedDemo {
 
     def test() {
-       int printing = new Date()
-       println printing
+        int printing = new Date()
+        println printing
   }
 
     def closureInAction() {

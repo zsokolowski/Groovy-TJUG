@@ -55,4 +55,28 @@ simplest way to create templates"""
             writer.write('Napiszmy po polsku: ąęł.')
         }
     }
+
+    void runProcess(){
+        println "listing directory: \n"
+        def listFiles = 'ls'.execute()
+        def reverseSort = 'sort -r'.execute()
+        def ignoreCase = "tr '[A-Z]' '[a-z]'".execute()
+
+
+        listFiles | ignoreCase |reverseSort
+        reverseSort.waitForOrKill(1000)
+        if(reverseSort.exitValue()) {
+            print reverseSort.err.text
+        } else {
+            print reverseSort.text
+        }
+    }
+
+    void transformFile(File fileName)  {
+        FileWriter fileWriter = new FileWriter("transformed.txt")
+        Reader reader = fileName.newReader()
+        reader.transformLine(fileWriter) { String line ->
+            (line - 'line').replaceAll(";",",").toUpperCase()
+        }
+    }
 }
